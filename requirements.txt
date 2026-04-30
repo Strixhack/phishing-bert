@@ -1,0 +1,37 @@
+# ============================================================
+# PhishBERT - Phishing Email Triage with DistilBERT
+# requirements.txt — Install with: pip install -r requirements.txt
+# ============================================================
+
+# Core deep learning framework (PyTorch)
+torch==2.2.0
+torchvision==0.17.0
+
+# HuggingFace Transformers — provides DistilBERT model + tokenizer
+transformers==4.40.0
+
+# HuggingFace Datasets — easy dataset loading and preprocessing
+datasets==2.18.0
+
+# Scientific computing and data manipulation
+numpy==1.26.4
+pandas==2.2.1
+scikit-learn==1.4.1       # For metrics: F1, precision, recall, confusion matrix
+
+# Text / HTML processing
+beautifulsoup4==4.12.3    # Strip HTML from email bodies
+lxml==5.1.0               # HTML parser backend for BeautifulSoup
+
+# Visualization — used in EDA notebook and evaluation plots
+matplotlib==3.8.3
+seaborn==0.13.2
+
+# Experiment tracking — logs training metrics to weights & biases (optional)
+# wandb==0.16.6
+
+# Demo UI — Gradio provides a browser-based interface for the model
+gradio==4.26.0
+
+# Utilities
+tqdm==4.66.2              # Progress bars during training/preprocessing
+python-dotenv==1.0.1      # Load environment variables from .env file

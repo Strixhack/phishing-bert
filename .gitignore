@@ -1,0 +1,57 @@
+# ============================================================
+# .gitignore for PhishBERT
+# ============================================================
+
+# ── Python ────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Virtual environments ──────────────────────────────────────
+venv/
+env/
+.env
+.venv/
+
+# ── Data — raw and processed CSVs are excluded ───────────────
+# Reason: datasets can be large (100MB+) and have separate
+# licensing requirements. Recreate via preprocess.py.
+data/raw/
+data/processed/
+
+# ── Model weights ─────────────────────────────────────────────
+# Reason: model checkpoints are 250MB+ each.
+# Share via HuggingFace Hub or Google Drive instead.
+models/checkpoints/
+*.bin
+*.pt
+*.pth
+*.safetensors
+
+# ── Jupyter Notebooks (outputs only) ─────────────────────────
+# Commit notebooks but not their outputs (can contain sensitive data)
+notebooks/.ipynb_checkpoints/
+
+# ── IDE ───────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ── macOS ────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+
+# ── Gradio cache ──────────────────────────────────────────────
+gradio_cached_examples/
+tmp_eval/
+
+# ── Secrets ───────────────────────────────────────────────────
+.env
+secrets.json
